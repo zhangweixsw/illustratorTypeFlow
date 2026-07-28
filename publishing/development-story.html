@@ -1,0 +1,41 @@
+<article class="mootop-editorial-story">
+<section class="story-opening">
+<div class="story-kicker"><span>BUILD LOG · 005</span><span>WINDOWS TOOL · V1.0</span></div>
+<p class="story-opening-line">少按一次中英切换，<br>让脑子留在设计上。</p>
+<p class="story-lede">最开始我以为，这就是“看见输入框就开中文”。真正写下去才发现，Illustrator 里的文字、参数、画布和第三方插件，根本不会排着队告诉你自己是谁。</p>
+</section>
+
+<section class="story-section">
+<div class="story-section-head"><span class="story-number">01</span><div><p class="story-label">WHY I BUILT IT</p><h2>小麻烦不致命，但一天能打断几十次</h2></div></div>
+<p>在 Illustrator 里改图层名、写画布文字，需要中文输入法；鼠标一回到画布，想按 <code>V</code> 切选择工具，输入法还开着，快捷键就可能变成字母输入。再去改宽高、坐标和字号，又希望它保持英文。</p>
+<p>手动切一次不难，烦的是每隔几分钟都要想起这件事。这个工具没有什么宏大的起点，就是想把这一下停顿拿掉。</p>
+</section>
+
+<section class="story-section story-section-dark">
+<div class="story-section-head"><span class="story-number">02</span><div><p class="story-label">THE FIRST WRONG IDEA</p><h2>“是输入框就开中文”很快就撞墙了</h2></div></div>
+<p>图层重命名要中文，宽高参数框却要英文；第三方插件的文字框和网页面板，有时暴露给 Windows 的控件信息差不多。画布文字更特殊：你明明看见插入点在闪，系统却不一定把它当成一个标准文本框。</p>
+<p>后来我把判断拆成两层。第一层看 Windows 辅助功能接口提供的焦点、控件类型、名称和层级，分出文字框和数字参数框。第二层专门照顾画布文字，通过文字工具、点击、退出编辑和工具切换这些动作做校正。</p>
+</section>
+
+<section class="story-section">
+<div class="story-section-head"><span class="story-number">03</span><div><p class="story-label">NO FAKE KEYSTROKES</p><h2>没有走“偷偷按一下 Shift”的捷径</h2></div></div>
+<p>模拟 <code>Shift</code>、<code>Ctrl+Space</code> 或 <code>Win+Space</code> 写起来快，但用户改了快捷键会失效，不同输入法的行为也不完全一样，还可能刚好撞上 Illustrator 的操作。</p>
+<p>这个项目直接请求当前输入法打开或关闭，而不是往键盘队列里塞按键。程序只管“当前中文输入法开还是关”，不替用户选择微软拼音还是微信输入法。你原来喜欢用哪个，继续用哪个。</p>
+</section>
+
+<section class="story-section story-section-dark">
+<div class="story-section-head"><span class="story-number">04</span><div><p class="story-label">REAL-WORLD EDGES</p><h2>少数误判，给用户一个能落地的出口</h2></div></div>
+<p>Illustrator 加上第三方插件，控件实现方式太多。靠代码里不断追加名单，最后只会变成一团谁也不敢动的规则。</p>
+<p>所以托盘菜单里留了“设为文字框”“设为参数框”和“清除规则”。自动判断负责大多数情况，某个只出现在特定插件里的输入框，让使用者点一次就记住。规则只保存在本机，不需要把控件信息上传到服务器。</p>
+<p>焦点变化还会在几毫秒里连续跳过窗口、容器和文本框。项目做了很短的防抖，只在判断稳定且目标状态确实变化时切换，避免输入法来回抖动。切出 Illustrator 时，再恢复进入前的状态，尽量不影响其他软件。</p>
+</section>
+
+<section class="story-section">
+<div class="story-section-head"><span class="story-number">05</span><div><p class="story-label">SHIPPING V1.0</p><h2>免费版先把最常用的场景做好</h2></div></div>
+<p>v1.0.0 是 Windows x64 免费版，主程序做成自包含单文件，不用预装 .NET，也不需要管理员权限。当前安装包通过界面焦点和画布操作校正工作；更精确的 Illustrator 原生插件源码已经预留，但 Adobe SDK 不能随项目分发，所以免费包里没有塞一个来路不明的 <code>.aip</code>。</p>
+<p>测试也不只是看“能不能切”。我会在画布文字和选择工具之间连续来回，再试图层重命名、宽高、透明度、第三方插件输入框和 <code>Alt+Tab</code>。这种工具真正的问题，往往不是第一次能不能工作，而是用半小时后会不会突然卡在错误状态。</p>
+<div class="story-final-thought"><p>效率工具不一定要替人完成多复杂的工作。</p><strong>能把一天里反复出现的那一下停顿拿掉，<br>就已经有用了。</strong></div>
+</section>
+
+<section class="story-cta"><p class="story-label">FREE · WINDOWS X64 · V1.0.0</p><h2>让输入法跟着工作走，<br>不用让工作跟着输入法走。</h2><p>免费使用，本地运行，不上传设计文件。</p><a href="/product/illustrator-typeflow/">免费获取 Illustrator 智能输入法 <span>↗</span></a></section>
+</article>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllustratorTypeFlow.Core", "src\IllustratorTypeFlow.Core\IllustratorTypeFlow.Core.csproj", "{A7BB1C6E-5D53-45D2-877F-A9F5603526E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllustratorTypeFlow.App", "src\IllustratorTypeFlow.App\IllustratorTypeFlow.App.csproj", "{9B311ADE-DF5D-48D5-9DEE-EE95A5AB7314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllustratorTypeFlow.Tests", "tests\IllustratorTypeFlow.Tests\IllustratorTypeFlow.Tests.csproj", "{56B40D29-452C-4DCD-A665-A4B45CA2F934}"
+EndProject
+Global
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|x64 = Debug|x64
+    Release|x64 = Release|x64
+  EndGlobalSection
+  GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {A7BB1C6E-5D53-45D2-877F-A9F5603526E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+    {A7BB1C6E-5D53-45D2-877F-A9F5603526E4}.Debug|x64.Build.0 = Debug|Any CPU
+    {A7BB1C6E-5D53-45D2-877F-A9F5603526E4}.Release|x64.ActiveCfg = Release|Any CPU
+    {A7BB1C6E-5D53-45D2-877F-A9F5603526E4}.Release|x64.Build.0 = Release|Any CPU
+    {9B311ADE-DF5D-48D5-9DEE-EE95A5AB7314}.Debug|x64.ActiveCfg = Debug|x64
+    {9B311ADE-DF5D-48D5-9DEE-EE95A5AB7314}.Debug|x64.Build.0 = Debug|x64
+    {9B311ADE-DF5D-48D5-9DEE-EE95A5AB7314}.Release|x64.ActiveCfg = Release|x64
+    {9B311ADE-DF5D-48D5-9DEE-EE95A5AB7314}.Release|x64.Build.0 = Release|x64
+    {56B40D29-452C-4DCD-A665-A4B45CA2F934}.Debug|x64.ActiveCfg = Debug|Any CPU
+    {56B40D29-452C-4DCD-A665-A4B45CA2F934}.Debug|x64.Build.0 = Debug|Any CPU
+    {56B40D29-452C-4DCD-A665-A4B45CA2F934}.Release|x64.ActiveCfg = Release|Any CPU
+    {56B40D29-452C-4DCD-A665-A4B45CA2F934}.Release|x64.Build.0 = Release|Any CPU
+  EndGlobalSection
+EndGlobal
+

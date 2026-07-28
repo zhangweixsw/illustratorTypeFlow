@@ -1,0 +1,4 @@
+LIBRARY "IllustratorTypeFlow"
+EXPORTS
+    PluginMain
+
